@@ -1,0 +1,20 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-3 col-md-6 col-12" *ngFor="let d of data">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">{{ d.name }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">email: {{ d.email }}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">
+              gender: {{ d.gender }}
+            </h6>
+            <h6 class="card-subtitle mb-2 text-muted">
+              status: {{ d.status }}
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
