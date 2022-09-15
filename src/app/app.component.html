@@ -10,11 +10,26 @@
               gender: {{ d.gender }}
             </h6>
             <h6 class="card-subtitle mb-2 text-muted">
-              status': {{ d.status }}
+              status: {{ d.status }}
             </h6>
           </div>
         </div>
       </div>
     </div>
+    <hr />
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search Keywords"
+        aria-label="search Keywords"
+        aria-describedby="basic-addon2"
+        [(ngModel)]="searchKeyword"
+      />
+    </div>
+    <div
+      class="text-contaniner"
+      [innerHtml]="text | searchPipe: searchKeyword:'full'"
+    ></div>
   </div>
 </section>
